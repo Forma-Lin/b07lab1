@@ -92,11 +92,13 @@ public class Polynomial{
 					sav.add(pa);
 				}
 			}
+			pa = inp.substring(bl,inp.length());
+			sav.add(pa);
 			HashMap<Integer, Double> poly = new HashMap<Integer, Double>();
 			for(String x : sav){
 				String[] nums = x.split("x");
 				if(nums.length==1){
-					poly.put(Integer.parseInt(nums[1]),0.0);
+					poly.put(0,Double.parseDouble(nums[0]));
 				}
 				else{
 					poly.put(Integer.parseInt(nums[1]),Double.parseDouble(nums[0]));

@@ -22,15 +22,15 @@ public class Driver {
   else 
    System.out.println("1 is not a root of s"); 
  } */
-  Polynomial m = p1.multiply(p2);
+  Polynomial m = p1.add(p2);
   for(int i=0;i<m.p.length;i++){
     System.out.println(m.p[i]);
   }
   for(int i=0;i<m.p.length;i++){
     System.out.println(m.exp[i]);
   }
-  m.SavetoFile("savem.txt");
-  File f = new File("savem.txt");
+  m.SavetoFile("am.txt");
+  File f = new File("t.txt");
   Polynomial cm = new Polynomial(f);
   for(int i=0;i<cm.p.length;i++){
     System.out.println(cm.p[i]);
